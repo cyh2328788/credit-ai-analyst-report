@@ -1428,6 +1428,18 @@ html,body{height:100%;background:#111;overflow:hidden;
 
 <script>
 const stage=document.getElementById('stage');
+// Move the former slides 10–12 behind the former slide 16, then refresh visible page numbers.
+const movedSlides=[
+  stage.querySelector('.s10-slide'),
+  stage.querySelector('.s11-slide'),
+  stage.querySelector('.s12-slide')
+];
+const moveAnchor=stage.querySelector('.s16-slide').nextElementSibling;
+movedSlides.forEach(slide=>stage.insertBefore(slide,moveAnchor));
+[...stage.querySelectorAll('.slide')].forEach((slide,index)=>{
+  const pageNo=slide.querySelector(':scope > .pageno');
+  if(pageNo) pageNo.textContent=index+1;
+});
 const slides=[...document.querySelectorAll('.slide')];
 const TOTAL=27;
 let cur=0;
