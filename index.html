@@ -257,7 +257,7 @@ html,body{height:100%;background:#111;overflow:hidden;
 .s12-slide .bullet b,.s12-slide .bullet strong{color:#111;font-weight:800}.s12-tables{display:flex;flex-direction:column;gap:9px;flex:1;min-height:0;padding:0 18px}
 .s12-table{width:100%;border-collapse:collapse;table-layout:fixed;font-size:15.2px;color:#111;border-top:1px solid #999;border-bottom:1px solid #999}
 .s12-table col.icon{width:60px}
-.s12-table col.name{width:260px}
+.s12-table col.name{width:285px}
 .s12-table col.pro{width:380px}
 .s12-table col.con{width:auto}
 .s12-table th{height:31px;text-align:left;font-size:16px;font-weight:800;color:#111;padding:4px 9px;border-bottom:1px solid #999;background:#fff}
@@ -271,6 +271,8 @@ html,body{height:100%;background:#111;overflow:hidden;
 .s12-table tbody tr:last-child td{border-bottom:0}
 .s12-table .logo-cell{text-align:center;padding:4px 8px;background:#fff!important}
 .s12-table .logo-cell img{width:34px;height:34px;object-fit:contain;display:inline-block;vertical-align:middle}
+.s12-table .logo-cell img.tool-logo{box-sizing:border-box;padding:3px;border-radius:8px}
+.s12-table .logo-cell img.tool-logo.workbuddy{padding:0;object-fit:cover;object-position:left center}
 .s12-table .tool-badge{display:inline-flex;width:34px;height:34px;border-radius:8px;align-items:center;justify-content:center;color:#fff;font-size:11px;font-weight:800;letter-spacing:.2px;vertical-align:middle}
 .s12-table .tool-badge.chatgpt{background:#111}
 .s12-table .tool-badge.workbuddy{background:#2867D8}
@@ -301,17 +303,19 @@ html,body{height:100%;background:#111;overflow:hidden;
 .s13 .col-r{flex:1.18;display:flex;flex-direction:column;gap:14px;min-height:0;justify-content:center}
 .s13-slide{padding:34px 44px 34px}
 .s13-slide .logo{top:38px;right:58px;height:44px}
-.s13-slide .s-title{margin-bottom:22px}
-.s13-slide .lead{width:540px;margin:0}
-.s13-slide .bullet{margin-bottom:18px;padding-left:30px}
+.s13-slide .s-title{margin-bottom:14px}
+.s13-slide .lead{width:1120px;margin:0}
+.s13-slide .bullet{margin-bottom:8px;padding-left:30px}
 .s13-slide .bullet b,.s13-slide .bullet strong{color:#111;font-weight:800}.s13-visuals{position:absolute;left:44px;right:44px;top:124px;bottom:50px}
-.s13-leftcard{position:absolute;left:0;top:164px;width:468px;height:492px;border:1.5px solid #d0d0d0;
+.s13-slide .s13-visuals{top:245px;bottom:40px;display:grid;grid-template-columns:330px 330px minmax(0,1fr);gap:16px}
+.s13-leftcard{position:relative;align-self:start;height:350px;min-width:0;min-height:0;border:1.5px solid #d0d0d0;
   box-shadow:0 2px 8px rgba(0,0,0,.08);background:#fff;overflow:hidden}
-.s13-leftcard img{width:100%;height:100%;object-fit:cover;object-position:center top;display:block}
-.s13-rightshots{position:absolute;left:520px;top:0;width:620px;height:100%;display:flex;flex-direction:column;gap:8px}
-.s13-shot{width:100%;object-fit:cover;object-position:top center;border:1.5px solid #d0d0d0;background:#fff;box-shadow:none}
-.s13-shot.top{height:430px}
-.s13-shot.bottom{height:274px}
+.s13-leftcard img{width:100%;height:100%;object-fit:contain;object-position:center top;display:block}
+.s13-midshots{display:grid;grid-template-rows:1fr 1fr;gap:10px;min-width:0;min-height:0}
+.s13-shot{display:block;width:100%;height:100%;min-height:0;object-fit:cover;object-position:top center;border:1.5px solid #d0d0d0;background:#fff;overflow:hidden}
+.s13-rightdemo{position:relative;min-width:0;min-height:0;display:flex;flex-direction:column}
+.s13-video-wrap{flex:1;min-height:0;border:1.5px solid #d0d0d0;background:#f7f7f7;overflow:hidden;display:flex;align-items:center;justify-content:center}
+.s13-video{display:block;width:100%;height:100%;object-fit:contain;background:#fff}
 
 /* ---------- S14 analysis charts ---------- */
 .s14-slide{padding:34px 28px 28px}
@@ -322,8 +326,8 @@ html,body{height:100%;background:#111;overflow:hidden;
 .s14-analysis-slide{padding:34px 48px 40px}
 .s14-analysis-slide .s-title{margin-bottom:24px}
 .s14-analysis-layout{display:grid;grid-template-columns:minmax(0,1fr) 300px;gap:30px;align-items:center;flex:1;min-height:0}
-.s14-analysis-video-wrap{position:relative;display:flex;align-items:center;justify-content:center;min-height:0;height:100%;background:#0e0e0e;border:1px solid #d0d0d0;overflow:hidden}
-.s14-analysis-video{display:block;width:100%;height:100%;max-height:650px;object-fit:contain;background:#000}
+.s14-analysis-video-wrap{position:relative;display:flex;align-items:center;justify-content:center;width:100%;height:auto;aspect-ratio:2034/1450;align-self:center;background:#fff;border:1px solid #d0d0d0;overflow:hidden}
+.s14-analysis-video{display:block;width:100%;height:100%;object-fit:contain;background:#fff}
 .s14-analysis-copy{border-left:4px solid var(--orange);padding:22px 0 22px 24px;color:#222}
 .s14-analysis-copy h3{font-size:24px;margin:0 0 14px;font-weight:800;color:#111}
 .s14-analysis-copy p{font-size:19px;line-height:1.62;margin:0 0 22px}
@@ -382,20 +386,50 @@ html,body{height:100%;background:#111;overflow:hidden;
 .s19-slide .logo{top:38px;right:58px;height:42px}
 .s19-slide .lead{margin:0 54px 18px 24px}
 .s19-slide .bullet{margin-bottom:7px;padding-left:23px}
-.s19-slide .bullet b,.s19-slide .bullet strong{color:#111;font-weight:800}.s19-layout{display:grid;grid-template-columns:1.1fr .9fr;gap:24px;flex:1;min-height:0;align-items:stretch}
+.s19-slide .bullet b,.s19-slide .bullet strong{color:#111;font-weight:800}.s19-layout{display:grid;grid-template-columns:1fr 1fr;gap:24px;flex:1;min-height:0;align-items:stretch}
 .s19-block{min-height:0;display:flex;flex-direction:column}
-.s19-block:first-child{padding-top:0;justify-content:center;transform:translateY(-32px)}
+.s19-block:first-child{padding-top:0;justify-content:center;transform:translateY(-12px)}
 .mini-h{font-size:15px;font-weight:800;color:#111;border-bottom:2px solid var(--orange);display:inline-block;padding-bottom:4px;margin-bottom:8px}
-.s19-flow{width:98%;height:auto;flex:0 0 auto;align-self:center;object-fit:contain;object-position:center;border:1.5px solid #d0d0d0;border-radius:0;background:#fff;box-shadow:none}
+.s19-flow-generated{display:block;width:100%;height:auto;max-height:360px;object-fit:contain;object-position:center;border:1.5px solid #d0d0d0;background:#fff}
+.s19-flow-diagram{width:100%;height:410px;flex:0 0 auto;border:1.5px solid #d0d0d0;background:#fff;padding:18px;display:grid;grid-template-columns:160px 54px minmax(0,1fr);grid-template-rows:1fr 1fr;gap:14px 0}
+.s19-main-agent{grid-column:1;grid-row:1/3;align-self:center;height:150px;border:2px solid #6f9874;background:#eef6ed;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:12px}
+.s19-main-agent .agent-kicker{font-size:12px;color:#55725a;font-weight:800;letter-spacing:.5px;text-transform:uppercase;margin-bottom:5px}
+.s19-main-agent strong{font-size:21px;line-height:1.25;color:#1c3420}
+.s19-main-agent span{font-size:12.5px;line-height:1.45;color:#607064;margin-top:8px}
+.s19-connector{display:flex;flex-direction:column;align-items:center;justify-content:center;font-weight:800}
+.s19-connector .arrow{font-size:31px;line-height:1;color:var(--orange)}
+.s19-connector small{font-size:10.5px;line-height:1.2;color:#777;text-align:center;margin-top:5px}
+.s19-connector.once .arrow{color:#3f6db0}
+.s19-mode-card{min-width:0;border:1.5px solid #d8d8d8;padding:14px 16px;background:#fff;display:flex;flex-direction:column;justify-content:center}
+.s19-mode-card.persistent{border-left:5px solid var(--orange);background:#fff8f2}
+.s19-mode-card.once{border-left:5px solid #3f6db0;background:#f5f8fc}
+.s19-mode-head{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:8px}
+.s19-mode-head strong{font-size:18px;color:#111}
+.s19-mode-head span{font-size:11px;font-weight:800;padding:3px 8px;border-radius:10px;background:#fde3d1;color:#b44c08;white-space:nowrap}
+.s19-mode-card.once .s19-mode-head span{background:#dde9f7;color:#2e5ea0}
+.s19-mode-agent{font-size:15px;font-weight:800;color:#222;margin-bottom:5px}
+.s19-mode-copy{font-size:13.2px;line-height:1.45;color:#555}
+.s19-mode-flow{font-size:11.7px;line-height:1.4;color:#777;margin-top:7px;font-weight:700}
+.s19-mode-chips{display:flex;flex-wrap:wrap;gap:6px;margin:2px 0 8px}
+.s19-mode-chips span{font-size:12.5px;font-weight:800;color:#264f82;background:#e6eef8;border:1px solid #cbd9ea;padding:4px 9px}
 .s19-right{gap:12px}
-.s19-video{width:100%;height:292px;flex:none;border:1.5px solid #d0d0d0;border-radius:0;overflow:hidden}
+.s19-video{width:100%;height:292px;flex:none;border:1.5px solid #d0d0d0;border-radius:0;overflow:hidden;background:#fff}
 .s19-video img{width:100%;height:100%;object-fit:contain!important;display:block;background:#fff}
+.s19-video .inline-autoplay-video{width:100%;height:100%;object-fit:contain!important;background:#fff}
 .s19-video .vtag{display:none}
 .s19-table{width:100%;flex:1;min-height:0;object-fit:contain;object-position:center;border:1.5px solid #d0d0d0;border-radius:0;background:#fff;box-shadow:none}
 
 /* ---------- S20 context compression ---------- */
-.s20-context{gap:8px;min-height:0}
-.s20-context img{width:100%;height:auto;max-height:610px;object-fit:contain;border:1.5px solid #d0d0d0;background:#fff}
+.s20-slide{padding:38px 48px 38px}
+.s20-slide .s-title{margin-bottom:22px}
+.s20-slide .lead{margin-bottom:16px}
+.s20-layout{display:grid;grid-template-columns:.82fr 1.18fr;gap:22px;flex:1;min-height:0;align-items:stretch}
+.s20-card-stack{display:flex;flex-direction:column;gap:14px;min-height:0;justify-content:center}
+.s20-card{height:auto;min-height:138px;padding:18px 22px;display:flex;flex-direction:column;justify-content:center}
+.s20-card-title{font-weight:800;color:#111;font-size:19px;margin-bottom:12px}
+.s20-card-copy{font-size:16.5px;color:#555;line-height:1.65}
+.s20-context{display:flex;flex-direction:column;gap:8px;min-height:0;justify-content:center}
+.s20-context img{width:100%;height:100%;min-height:0;object-fit:contain;border:1.5px solid #d0d0d0;background:#fff}
 .s20-context .shot-cap{font-size:13px;color:#777;text-align:center;margin-top:4px}
 /* S20 insight callout (context-compression takeaways) */
 .insight{border:1px solid var(--peach-line);border-left:4px solid var(--orange);background:var(--peach);border-radius:6px;padding:12px 16px 13px}
@@ -407,18 +441,15 @@ html,body{height:100%;background:#111;overflow:hidden;
 .ins-item span{font-size:12.5px;color:#666;line-height:1.5}
 
 /* ---------- S21 few-shot ---------- */
-.s21-slide{padding:38px 48px 38px}
+.s21-slide{padding:38px 54px 42px}
 .s21-slide .logo{top:38px;right:58px;height:42px}
-.s21-slide .lead{margin:0 0 18px;max-width:760px}
-.s21-slide .bullet{margin-bottom:7px;padding-left:23px}
-.s21-slide .bullet b,.s21-slide .bullet strong{color:#111;font-weight:800}.s21-grid{display:grid;grid-template-columns:1.08fr .92fr;gap:24px;flex:1;min-height:0;align-items:stretch}
-.s21-left,.s21-right{min-height:0;display:flex;flex-direction:column}
-.s21-shot{width:100%;height:100%;min-height:0;object-fit:contain;object-position:center;background:#fff;border:1.5px solid #d0d0d0;border-radius:0;box-shadow:none}
-.s21-left .s21-shot{object-position:left center}
-.s21-right{gap:12px}
-.s21-demo{height:300px;flex:0 0 300px}
-.s21-thumbs{flex:1;min-height:0}
-.s21-cap{font-size:13px;color:#777;text-align:center;margin-top:5px;line-height:1.2}
+.s21-slide .lead{margin:-8px 0 18px;max-width:1160px}
+.s21-slide .bullet{margin-bottom:6px;padding-left:23px}
+.s21-gallery{display:grid;grid-template-columns:.9fr 1.05fr 1.05fr;gap:18px;flex:1;min-height:0;align-items:start}
+.s21-figure{margin:0;min-width:0;display:flex;flex-direction:column}
+.s21-figure img{width:100%;height:246px;object-fit:contain;object-position:center top;background:#fff;border:1px solid #d1d1d1}
+.s21-figure figcaption{font-size:15px;font-weight:800;color:#222;line-height:1.3;margin-top:9px}
+.s21-figure strong{color:var(--orange)}
 
 /* ---------- S22 chain rows ---------- */
 .s22-slide{padding:50px 74px 54px}
@@ -725,7 +756,7 @@ html,body{height:100%;background:#111;overflow:hidden;
   </section>
 
   <!-- ============ S5 delivery outcomes ============ -->
-  <section class="slide">
+  <section class="slide s20-slide">
     <img class="logo" src="assets/logo-gf.png">
     <div class="pageno">5</div>
     <h2 class="s-title reveal">信用研究 Agent 课题交付成果</h2>
@@ -932,9 +963,9 @@ html,body{height:100%;background:#111;overflow:hidden;
     <div class="pageno">11</div>
     <h2 class="s-title reveal">信用研究 AI Analyst —— 基于 Skill 的 Agent 工作流</h2>
     <ul class="lead">
-        <li class="bullet reveal" style="--i:1">Skill 将信用研究拆成多个 Task。每个 Task 都规定了目标、步骤、输入和输出，Agent 在该边界内反复完成“读取资料 → 推理规划 → 调用工具 → 检查修正”，直到阶段结果满足要求。</li>
-        <li class="bullet reveal" style="--i:2">每个 Task 都由 Skill 定义边界，并在边界内循环执行。每个 Task 的输出会沉淀为下一阶段上下文，在保留关键结论的同时压缩原始资料占用，使 Agent 能稳定执行长链条研究任务。</li>
-        <li class="bullet reveal" style="--i:3">Task 化设计符合信用评级的专业流程，让主体识别、研究、评分和评级推导逐步推进，并支持阶段性复核。</li>
+        <li class="bullet reveal" style="--i:1">Skill 将信用研究流程拆分为多个 Task，明确各阶段的目标、步骤、输入、输出及执行边界。Agent 在边界内循环完成“读取资料—推理规划—调用工具—检查修正”，直至阶段结果满足交付要求。</li>
+        <li class="bullet reveal" style="--i:2">各 Task 通过结构化阶段输出相互衔接，将关键事实、判断依据和待核验事项传递至下一阶段，减少重复读取和无效上下文占用。</li>
+        <li class="bullet reveal" style="--i:3">Task 化设计与信用评级流程相匹配，使主体识别、资料分析、风险评估、定量评分和评级推导逐步推进，并支持阶段性复核。</li>
     </ul>
     <div class="s11-visuals">
       <div class="s11-fig reveal" style="--i:4">
@@ -993,8 +1024,8 @@ html,body{height:100%;background:#111;overflow:hidden;
     <div class="pageno">12</div>
     <h2 class="s-title reveal">Agent 产品/工具与底座模型对比</h2>
     <ul class="lead">
-      <li class="bullet reveal" style="--i:1">产品与工具选型重点考察 Skill 兼容性、长文档处理、工具与桌面应用接入、权限治理及过程可追溯性，并需进行业务适配与回归测试。</li>
-      <li class="bullet reveal" style="--i:2">信用研究以资料处理、跨应用协作和文档交付为主，Work 类 Agent 比 Code Agent 更匹配；综合能力与当前生态，优先选择 <b>ChatGPT Work</b>。</li>
+      <li class="bullet reveal" style="--i:1">平台选型重点评估资料解析、长文档处理、可复用工作流支持、办公应用接入、权限治理、过程可追溯性及长链任务稳定性。</li>
+      <li class="bullet reveal" style="--i:2">信用研究以资料处理、跨应用协作和成果交付为主，Work 类 Agent 相较 Code Agent 更贴合任务场景，可减少工作流适配和工程化改造。</li>
     </ul>
     <div class="s12-tables">
       <div class="reveal" style="--i:4">
@@ -1002,9 +1033,9 @@ html,body{height:100%;background:#111;overflow:hidden;
           <colgroup><col class="icon"><col class="name"><col class="pro"><col class="con"></colgroup>
           <thead><tr><th colspan="2">Agent 产品/工具对比</th><th>优点</th><th>缺点</th></tr></thead>
           <tbody>
-            <tr><td class="logo-cell"><span class="tool-badge chatgpt">CW</span></td><td class="name">ChatGPT Work｜Work Agent</td><td class="has-star"><span class="star">★</span>跨工具协作，成果交付完整</td><td>受方案、权限和插件配置影响</td></tr>
-            <tr><td class="logo-cell"><img src="assets/tool-claude.png"></td><td class="name">Claude Cowork｜Work Agent</td><td class="has-star"><span class="star">★</span>本地文件与应用协同，研究写作强</td><td>权限与数据治理要求较高</td></tr>
-            <tr><td class="logo-cell"><span class="tool-badge workbuddy">WB</span></td><td class="name">WorkBuddy｜Work Agent</td><td class="has-star"><span class="star">★</span>本地办公、Skill/MCP、多模型</td><td>产品较新，稳定性需验证</td></tr>
+            <tr><td class="logo-cell"><img class="tool-logo" src="assets/tool-chatgpt-work.png" alt="ChatGPT Work"></td><td class="name">ChatGPT Work｜Work Agent</td><td class="has-star"><span class="star">★</span>跨工具协作，成果交付完整</td><td>受方案、权限和插件配置影响</td></tr>
+            <tr><td class="logo-cell"><img class="tool-logo" src="assets/tool-claude-cowork.png" alt="Claude Cowork"></td><td class="name">Claude Cowork｜Work Agent</td><td class="has-star"><span class="star">★</span>本地文件与应用协同，研究写作强</td><td>权限与数据治理要求较高</td></tr>
+            <tr><td class="logo-cell"><img class="tool-logo workbuddy" src="assets/tool-workbuddy.png" alt="WorkBuddy"></td><td class="name">WorkBuddy｜Work Agent</td><td class="has-star"><span class="star">★</span>本地办公、Skill/MCP、多模型</td><td>产品较新，稳定性需验证</td></tr>
             <tr><td class="logo-cell"><img src="assets/tool-codex.png"></td><td class="name">Codex｜Code Agent</td><td>文件、终端与代码执行强，多 Agent</td><td>偏技术，使用门槛较高</td></tr>
             <tr><td class="logo-cell"><img src="assets/tool-qoder.png"></td><td class="name">Qoder｜Code Agent</td><td>长任务、知识引擎、多 Agent</td><td>效率与稳定性需验证</td></tr>
             <tr><td class="logo-cell"><img src="assets/tool-trae.png"></td><td class="name">Trae｜Code Agent</td><td>IDE 集成，多模型与执行轨迹</td><td>偏开发，办公适配有限</td></tr>
@@ -1017,10 +1048,10 @@ html,body{height:100%;background:#111;overflow:hidden;
           <colgroup><col class="icon"><col class="name"><col class="pro"><col class="con"></colgroup>
           <thead><tr><th colspan="2">底座模型对比</th><th>优点</th><th>缺点</th></tr></thead>
           <tbody>
-            <tr><td class="logo-cell"><img src="assets/model-gpt.png"></td><td class="name">GPT-5.6 Sol</td><td>专业任务与工具调用强，1.05M 上下文</td><td>成本较高，需业务评测</td></tr>
-            <tr><td class="logo-cell"><img src="assets/model-opus.png"></td><td class="name">Claude Opus 4.8</td><td>长任务与专业写作强，1M 上下文</td><td>成本与可用性需评估</td></tr>
-            <tr><td class="logo-cell"><img src="assets/model-deepseek.png"></td><td class="name">DeepSeek-V4-Pro</td><td>推理、工具调用与性价比，1M 上下文</td><td>多模态与办公集成需实测</td></tr>
-            <tr><td class="logo-cell"><img src="assets/model-qwen.png"></td><td class="name">Qwen3.7 Plus</td><td>多模态、工具调用、1M 上下文</td><td>一致性与引用质量需评测</td></tr>
+            <tr><td class="logo-cell"><img src="assets/model-gpt.png"></td><td class="name">GPT-5.6 Sol</td><td>文本/图像多模态、工具调用强，1.05M 上下文</td><td>成本较高，复杂计算仍需核验</td></tr>
+            <tr><td class="logo-cell"><img src="assets/model-opus.png"></td><td class="name">Claude Opus 4.8</td><td>长文档与图像理解、专业写作强，1M 上下文</td><td>工具接入与成本需评估</td></tr>
+            <tr><td class="logo-cell"><img src="assets/model-deepseek.png"></td><td class="name">DeepSeek-V4-Pro</td><td>推理、工具调用与性价比，1M 上下文</td><td>以文本为主，多模态与办公集成需实测</td></tr>
+            <tr><td class="logo-cell"><img src="assets/model-qwen.png"></td><td class="name">Qwen3.7 Plus</td><td>文本/图像/视频多模态、工具调用，1M 上下文</td><td>长链一致性与引用质量需验证</td></tr>
           </tbody>
         </table>
       </div>
@@ -1031,18 +1062,24 @@ html,body{height:100%;background:#111;overflow:hidden;
   <section class="slide s13-slide">
     <img class="logo" src="assets/logo-gf.png">
     <div class="pageno">13</div>
-    <h2 class="s-title reveal">资料收集 / 格式解析 / 信息提取</h2>
+    <h2 class="s-title reveal">资料收集 / 文档解析 / 结构化信息提取</h2>
     <ul class="lead">
-      <li class="bullet reveal" style="--i:1">Agent 通过<b>决策树</b>判断所需资料来源。</li>
-      <li class="bullet reveal" style="--i:2">通过<b>内置字段映射规则</b>实现数据自动提取与交叉验证</li>
+      <li class="bullet reveal" style="--i:1"><b>Web Search</b> 通过 search、open_page 和 find_in_page 完成检索、打开页面和页内定位，并返回来源及引用信息。</li>
+      <li class="bullet reveal" style="--i:2">Skill 将发行人标识、报告期、资料类型和风险主题转化为检索任务；结果按来源优先级筛选，优先采用公司官网、交易所/监管机构、评级机构及权威行业资料。</li>
+      <li class="bullet reveal" style="--i:3">网页、PDF 和表格进入文档解析与字段提取；关键事实进行多来源比对，缺失或冲突信息标记为待核验事项。</li>
     </ul>
     <div class="s13-visuals">
       <div class="s13-leftcard reveal" style="--i:3">
         <img src="assets/s13-decisiontree.png" alt="资料来源要求">
       </div>
-      <div class="s13-rightshots">
-        <img class="s13-shot top reveal" style="--i:4" src="assets/s13-doc-thumbs.png" alt="资料缩略图识别">
-        <img class="s13-shot bottom reveal" style="--i:5" src="assets/s13-doc-parse.png" alt="分部结构解析">
+      <div class="s13-midshots">
+        <img class="s13-shot reveal" style="--i:4" src="assets/s13-doc-thumbs.png" alt="资料缩略图识别">
+        <img class="s13-shot reveal" style="--i:5" src="assets/s13-doc-parse.png" alt="文档结构解析">
+      </div>
+      <div class="s13-rightdemo reveal" style="--i:6">
+        <div class="s13-video-wrap">
+          <video class="s13-video" src="assets/video-websearch-collection.mp4" controls muted playsinline preload="metadata" data-autoplay="true"></video>
+        </div>
       </div>
     </div>
   </section>
@@ -1057,9 +1094,9 @@ html,body{height:100%;background:#111;overflow:hidden;
         <video class="s14-analysis-video" src="assets/video-analysis-calculation-web.mp4" controls muted playsinline preload="metadata" data-target-duration="20" data-autoplay="true"></video>
       </div>
       <div class="s14-analysis-copy reveal" style="--i:2">
-        <h3>财务分析与计算</h3>
-        <p>项目在财务分析阶段自动提取并标准化历史财务数据，计算盈利能力、资本结构、现金流和流动性指标，并依据既定阈值完成定量评分。</p>
-        <div class="s14-analysis-flow">数据标准化 → 财务指标计算 → 定量评分 → 人工复核</div>
+        <h3>财务数据处理与定量评分</h3>
+        <p>Agent 从财务报表及附注中提取并标准化历史数据，按预设口径计算盈利能力、杠杆、现金流覆盖和流动性指标，并依据评分规则生成定量评分。</p>
+        <div class="s14-analysis-flow">财务数据提取与标准化 → 指标计算 → 阈值映射 → 定量评分</div>
       </div>
     </div>
   </section>
@@ -1085,10 +1122,10 @@ html,body{height:100%;background:#111;overflow:hidden;
   <section class="slide s16-slide">
     <img class="logo" src="assets/logo-gf.png">
     <div class="pageno">16</div>
-    <h2 class="s-title reveal">信用研究 AI Analyst —— QC 审查与交付</h2>
+    <h2 class="s-title reveal">信用研究 AI Analyst —— 质量检查（QC）与交付</h2>
     <ul class="lead">
-      <li class="bullet reveal" style="--i:1">在关键节点嵌入 <b>&lt;脚本审查&gt;</b> 与 <b>&lt;多模态校验&gt;</b> 机制，确保评分逻辑、报告内容与输出格式的准确性，报告内容和内评打分完全可追溯。</li>
-      <li class="bullet reveal" style="--i:2">报告形式方面，实现了语言规范统一、图表色系一致，保障了可读性与一致性。</li>
+      <li class="bullet reveal" style="--i:1">Agent 在各 Task 结束及最终交付前执行规则校验、脚本校验和多模态视觉校验，检查主体口径、数据引用、计算结果、评分逻辑和报告格式。</li>
+      <li class="bullet reveal" style="--i:2">检查结果与阶段输出一并留存，支持对信息来源、计算过程和评分依据进行追溯；统一语言规范、图表模板和渲染规则，提升报告的可读性与版式一致性。</li>
     </ul>
     <div class="s16-layout">
       <div class="s16-panel s16-left-a reveal" style="--i:3">
@@ -1122,24 +1159,24 @@ html,body{height:100%;background:#111;overflow:hidden;
   <section class="slide s18-slide">
     <img class="logo" src="assets/logo-gf.png">
     <div class="pageno">18</div>
-    <h2 class="s-title reveal">遇到的问题和经验分享</h2>
+    <h2 class="s-title reveal">主要问题与实践经验</h2>
     <div class="exp-wrap">
       <div class="exp-col chl">
         <div class="col-h reveal" style="--i:1">核心挑战</div>
         <div class="exp-card reveal" style="--i:2">
-          <div class="eh"><svg class="ic" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg>"Lost-in-the-Middle" 长流程专注力</div>
-          <div class="ed">在单线长流程复杂任务中使 Agent 保持专注力</div>
-          <div class="sol"><b>解决方法：</b>Task 拆分、上下文交互管理、subagent、暂停确认、上下文压缩</div>
+          <div class="eh"><svg class="ic" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg>“Lost-in-the-Middle” 长流程专注力</div>
+          <div class="ed">长任务中部分信息可能被忽略，造成事实遗漏或口径漂移</div>
+          <div class="sol"><b>方法：</b>Task 拆分、One Task at a Time、阶段输出落盘、摘要节点、Subagent 与上下文压缩</div>
         </div>
         <div class="exp-card reveal" style="--i:3">
-          <div class="eh"><svg class="ic" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg>Agent 稳定性</div>
-          <div class="ed">复杂任务执行中保持输出一致性和可靠性</div>
-          <div class="sol"><b>解决方法：</b>few-shot，系统性校验机制，关键节点嵌入脚本审查与多模态校验</div>
+          <div class="eh"><svg class="ic" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg>输出稳定性</div>
+          <div class="ed">相同任务在字段覆盖、工具选择和输出结构上可能不一致</div>
+          <div class="sol"><b>方法：</b>示例约束、结构化模板、脚本校验和多模态视觉校验</div>
         </div>
         <div class="exp-card reveal" style="--i:4">
-          <div class="eh"><svg class="ic" viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="M22 4 12 14.01l-3-3"/></svg>避免模型幻觉</div>
-          <div class="ed">防止 Agent 生成与事实不符或未经证实的内容</div>
-          <div class="sol"><b>解决方法：</b>数据点抽查、覆盖度校验、要求 Agent 承认资料缺失而非编造</div>
+          <div class="eh"><svg class="ic" viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="M22 4 12 14.01l-3-3"/></svg>事实性错误与无依据补全</div>
+          <div class="ed">资料不足时，Agent 可能生成未经证实的内容</div>
+          <div class="sol"><b>方法：</b>来源引用、多来源核验、覆盖度检查和缺失信息标记，要求 Agent 承认资料缺失而非编造</div>
         </div>
       </div>
       <div class="exp-col exp">
@@ -1147,17 +1184,17 @@ html,body{height:100%;background:#111;overflow:hidden;
         <div class="exp-card reveal" style="--i:2">
           <div class="eh"><svg class="ic" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/></svg>信息提取</div>
           <div class="ed">输入数据来源多、格式杂、财务口径与主体口径不统一</div>
-          <div class="ed2 sol">明确使用工具的要求，保证每次都能提取到完整信息</div>
+          <div class="ed2 sol">通过字段映射、工具调用规则和覆盖度检查，提高提取完整性与口径一致性</div>
         </div>
         <div class="exp-card reveal" style="--i:3">
           <div class="eh"><svg class="ic" viewBox="0 0 24 24"><path d="M12 19l7-7 3 3-7 7-3-3z"/><path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18z"/><circle cx="11" cy="11" r="2"/></svg>写作风格</div>
           <div class="ed">统一报告语言规范和表达风格</div>
-          <div class="ed2 sol">AGENTS.md 设置通用规则对风格进行约束</div>
+          <div class="ed2 sol">在项目级规则文件中固化语言、术语和格式规范</div>
         </div>
         <div class="exp-card reveal" style="--i:4">
           <div class="eh"><svg class="ic" viewBox="0 0 24 24"><path d="M21.21 15.89A10 10 0 1 1 8 2.83"/><path d="M22 12A10 10 0 0 0 12 2v10z"/></svg>渲染交付</div>
           <div class="ed">图表色系一致，保障可读性与一致性</div>
-          <div class="ed2 sol">统一 CSS 与渲染脚本链，PNG 预览校验、多模态视觉校验，内容与打分完全可追溯</div>
+          <div class="ed2 sol">统一 CSS 与渲染脚本，通过全页 PNG 预览检查图表、表格、字体和分页</div>
         </div>
       </div>
     </div>
@@ -1174,8 +1211,7 @@ html,body{height:100%;background:#111;overflow:hidden;
     </ul>
     <div class="s19-layout">
       <div class="s19-block">
-        <div class="mini-h reveal" style="--i:3">Subagent (Custom) Agent 工作流</div>
-        <img class="s19-flow reveal" style="--i:3" src="assets/s19-flow-source.png" alt="subagent 工作流">
+        <img class="s19-flow-generated reveal" style="--i:3" src="assets/s19-subagent-workflow.png" alt="专项任务型与持续协作型 Subagent 工作流">
       </div>
       <div class="s19-block s19-right reveal" style="--i:4">
         <div class="vlaunch s19-video" data-video="assets/video-subagent-clean.mp4">
@@ -1192,25 +1228,25 @@ html,body{height:100%;background:#111;overflow:hidden;
   <section class="slide">
     <img class="logo" src="assets/logo-gf.png">
     <div class="pageno">20</div>
-    <h2 class="s-title reveal small">问题与实践经验 2 —— 阶段性摘要节点和主动上下文压缩</h2>
+    <h2 class="s-title reveal small">问题与实践经验 2 —— 阶段性输出与上下文管理</h2>
     <ul class="lead">
-      <li class="bullet reveal" style="--i:1">对于复杂任务，即便通过"Task 任务分解"，仍不能很好地解决"lost-in-the-middle"问题。</li>
-      <li class="bullet reveal" style="--i:2">在每个 Task 里，我们通过设置<b>"阶段性摘要节点"</b>确保 Agent 输出达到质量要求，并通过<b>主动上下文压缩</b>控制上下文长度。</li>
+      <li class="bullet reveal" style="--i:1">Task 拆分可以降低单次任务复杂度，但长流程中累计资料仍可能造成信息遗漏、口径漂移和重复读取，仍难以充分解决“Lost-in-the-Middle”问题。</li>
+      <li class="bullet reveal" style="--i:2">每个 Task 完成后形成结构化阶段输出并更新恢复锚点；后续 Task 按需读取关键结果，减少无效上下文占用，并支持任务中断后的准确恢复。</li>
     </ul>
-    <div class="two-col" style="gap:26px">
-      <div style="flex:.62;display:flex;flex-direction:column;gap:12px;justify-content:flex-start">
-        <div class="peach-card reveal" style="--i:3">
-          <div style="font-weight:800;color:#111;font-size:17px;margin-bottom:6px">【阶段性摘要节点】</div>
-          <div style="font-size:15.5px;color:#555;line-height:1.55">每完成一个章节（如公司概况、业务分析、财务分析），自动生成结构化摘要（含文字分析、数据表格），存入向量数据库。</div>
+    <div class="s20-layout">
+      <div class="s20-card-stack">
+        <div class="peach-card s20-card reveal" style="--i:3">
+          <div class="s20-card-title">阶段性输出</div>
+          <div class="s20-card-copy">Task 结束时将研究结论、数据表格、来源和待核验事项写入独立文件，作为后续 Task 的正式输入。</div>
         </div>
-        <div class="peach-card reveal" style="--i:4">
-          <div style="font-weight:800;color:#111;font-size:17px;margin-bottom:6px">【恢复锚点】</div>
-          <div style="font-size:15.5px;color:#555;line-height:1.55">项目根目录维护 <b style="color:#111">CURRENT_RATING_STATE.md</b>：只记录当前进度、当前/下一步 prompt 路径与已完成输出路径的最小导航信息。属恢复用途、非交付物，不列为资料来源。</div>
+        <div class="peach-card s20-card reveal" style="--i:4">
+          <div class="s20-card-title">恢复锚点</div>
+          <div class="s20-card-copy">项目根目录维护 <b style="color:#111">CURRENT_RATING_STATE.md</b>，仅记录当前进度、下一步任务及已完成输出路径，用于恢复执行位置，不作为研究来源。</div>
         </div>
       </div>
-      <div class="figcol s20-context reveal" style="--i:4;flex:1;justify-content:center">
-        <img class="shot" src="assets/s20-context-compression.png" alt="自动上下文压缩与 subagent 摘要">
-        <div class="shot-cap">自动上下文压缩：主任务保留关键摘要，subagent 输出结构化结论</div>
+      <div class="s20-context reveal" style="--i:4">
+        <img class="shot" src="assets/s20-context-compression.png" alt="恢复锚点、阶段输出与 Subagent 结构化结果">
+        <div class="shot-cap">实际运行示例：恢复锚点、阶段输出与 Subagent 结构化结果</div>
       </div>
     </div>
   </section>
@@ -1219,24 +1255,24 @@ html,body{height:100%;background:#111;overflow:hidden;
   <section class="slide s21-slide">
     <img class="logo" src="assets/logo-gf.png">
     <div class="pageno">21</div>
-    <h2 class="s-title reveal">问题与实践经验 3 —— few-shot 提示词</h2>
+    <h2 class="s-title reveal">问题与实践经验 3 —— 示例约束与输出规范</h2>
     <ul class="lead">
-      <li class="bullet reveal" style="--i:1">当输入指令不够清晰时，Agent 随机尝试不同方案，导致产出不稳定的结论。</li>
-      <li class="bullet reveal" style="--i:2">通过重复测试，我们发现重复出错的地方，补充更明确的 prompt。</li>
-      <li class="bullet reveal" style="--i:3">以关键信息提取为例，我们给 Agent 明确的<b>使用工具要求</b>，保证每次都能提取到完整信息。</li>
+      <li class="bullet reveal" style="--i:1">Agent 可以完成任务，但固定字段、缺失值、标题和样式等输出仍可能偏离交付规范。</li>
+      <li class="bullet reveal" style="--i:2">固定格式通过 One-shot 明确标准样例，多场景表达通过 Few-shot 统一口径，并结合模板、脚本和视觉检查。</li>
     </ul>
-    <div class="s21-grid">
-      <div class="s21-left reveal" style="--i:3">
-        <img class="s21-shot" src="assets/s21-fewshot-source.png" alt="few-shot 提示词策略">
-      </div>
-      <div class="s21-right reveal" style="--i:4">
-        <img class="s21-shot s21-demo" src="assets/s21-demo-source.png" alt="视觉工具调用演示">
-        <div class="vlaunch s21-shot s21-thumbs" data-video="assets/video-thumbnail.mp4">
-          <img src="assets/poster-thumbnail.jpg" alt="缩略图快速筛选关键材料页">
-          <div class="play"></div>
-          <div class="vtag">缩略图快速筛选关键材料页</div>
-        </div>
-      </div>
+    <div class="s21-gallery">
+      <figure class="s21-figure reveal" style="--i:3">
+        <img src="assets/s21-one-shot-fields.png" alt="固定字段标准填写示例">
+        <figcaption><strong>One-shot</strong>｜固定字段示例</figcaption>
+      </figure>
+      <figure class="s21-figure reveal" style="--i:4">
+        <img src="assets/s21-fewshot-business-title.png" alt="业务结构结论型图表标题">
+        <figcaption><strong>Few-shot</strong>｜业务结构标题</figcaption>
+      </figure>
+      <figure class="s21-figure reveal" style="--i:5">
+        <img src="assets/s21-fewshot-cashflow-title.png" alt="现金流结论型图表标题">
+        <figcaption><strong>Few-shot</strong>｜现金流标题</figcaption>
+      </figure>
     </div>
   </section>
 
