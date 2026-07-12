@@ -8,3 +8,4 @@ await rm(target, { recursive: true, force: true });
 await mkdir(target, { recursive: true });
 await cp(resolve(root, "index.html"), resolve(target, "index.html"));
 await cp(resolve(root, "assets"), resolve(target, "assets"), { recursive: true });
+await rm(resolve(target, "assets", "video-analysis-calculation.mp4"), { force: true });
