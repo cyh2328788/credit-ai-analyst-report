@@ -8,6 +8,7 @@
   "scripts": {
     "predev": "node scripts/sync-deck.mjs",
     "prebuild": "node scripts/sync-deck.mjs",
+    "pages:prepare": "node scripts/sync-pages.mjs",
     "dev": "vinext dev",
     "build": "vinext build",
     "start": "vinext start",
