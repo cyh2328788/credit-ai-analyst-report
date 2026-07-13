@@ -1159,7 +1159,7 @@ html,body{height:100%;background:#111;overflow:hidden;
       </div>
       <div class="s13-rightdemo reveal" style="--i:6">
         <div class="s13-video-wrap">
-          <video class="s13-video" src="assets/video-websearch-collection.mp4" controls muted playsinline preload="metadata" data-autoplay="true"></video>
+          <video class="s13-video" src="assets/video-websearch-collection.mp4" controls muted playsinline loop preload="metadata" data-autoplay="true"></video>
           <div class="video-intro">网页检索与资料收集</div>
         </div>
       </div>
@@ -1173,7 +1173,7 @@ html,body{height:100%;background:#111;overflow:hidden;
     <h2 class="s-title reveal">信用研究 AI Analyst —— 分析与计算</h2>
     <div class="s14-analysis-layout">
       <div class="s14-analysis-video-wrap reveal" style="--i:1">
-        <video class="s14-analysis-video" src="assets/video-analysis-calculation-web.mp4" controls muted playsinline preload="metadata" data-target-duration="20" data-autoplay="true"></video>
+        <video class="s14-analysis-video" src="assets/video-analysis-calculation-web.mp4" controls muted playsinline loop preload="metadata" data-target-duration="20" data-autoplay="true"></video>
         <div class="video-intro">财务数据处理与定量评分</div>
       </div>
       <div class="s14-analysis-copy reveal" style="--i:2">
@@ -1568,6 +1568,7 @@ document.querySelectorAll('.vlaunch[data-video]').forEach(vl=>{
   v.controls=true;
   v.muted=true;
   v.playsInline=true;
+  v.loop=true;
   v.preload='metadata';
   v.dataset.autoplay='true';
   vl.appendChild(v);
@@ -1672,7 +1673,7 @@ document.querySelectorAll('[data-goto]').forEach(el=>el.onclick=()=>show(+el.dat
 // lightbox for screenshots + videos
 const lb=document.getElementById('lightbox');
 function openImg(src){lb.innerHTML='<span class="lb-close">×</span>';const i=new Image();i.src=src;lb.appendChild(i);lb.classList.add('on');}
-function openVid(src,rate=1){lb.innerHTML='<span class="lb-close">×</span>';const v=document.createElement('video');v.src=src;v.controls=true;v.autoplay=true;v.playsInline=true;if(rate!==1)v.addEventListener('loadedmetadata',()=>{v.defaultPlaybackRate=rate;v.playbackRate=rate;},{once:true});lb.appendChild(v);lb.classList.add('on');}
+function openVid(src,rate=1){lb.innerHTML='<span class="lb-close">×</span>';const v=document.createElement('video');v.src=src;v.controls=true;v.autoplay=true;v.loop=true;v.playsInline=true;if(rate!==1)v.addEventListener('loadedmetadata',()=>{v.defaultPlaybackRate=rate;v.playbackRate=rate;},{once:true});lb.appendChild(v);lb.classList.add('on');}
 function closeLightbox(){lb.classList.remove('on');lb.innerHTML='<span class="lb-close">×</span>';}
 document.addEventListener('click',e=>{
   const shot=e.target.closest('.shot'); const vl=e.target.closest('.vlaunch');
